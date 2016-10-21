@@ -51,14 +51,8 @@
             
             for (int i=0; i < MAX(localArr.count, newArr.count); i++) {
                 
-                NSInteger newIndex = 0;
-                NSInteger localIndex = 0;
-                if (newArr.count > i) {
-                    newIndex = [newArr[i] integerValue];
-                }
-                if (localArr.count > i) {
-                    localIndex = [localArr[i] integerValue];
-                }
+                NSInteger newIndex = newArr.count > i ? [newArr[i] integerValue] : 0;
+                NSInteger localIndex = localArr.count > i ? [localArr[i] integerValue] : 0;
                 
                 if (newIndex > localIndex) {
                     haveNewVersion = YES;
@@ -108,7 +102,7 @@
     if (buttonIndex == 1) {
         NSString *appStoreString = [NSString stringWithFormat:@"https://itunes.apple.com/app/id%@", [BBUpdate shareUpdate].appID];
         NSURL *url = [NSURL URLWithString:appStoreString];
-        [[UIApplication sharedApplication]openURL:url];
+        [[UIApplication sharedApplication] openURL:url];
     }
 
 }

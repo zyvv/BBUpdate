@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name             = "BBUpdate"
   s.version          = "1.0"
-  s.summary          = "一行代码程序更新提醒"
+  s.summary          = "一行代码实现程序更新提醒"
   s.description      = <<-DESC
-                       一行代码程序更新提醒，还可以设置个性提示内容
+                       一行代码实现程序更新提醒，还可以设置确定取消等提示内容
                        DESC
   s.homepage         = "https://github.com/zyvv/BBUpdate"
   s.license          = 'MIT'
