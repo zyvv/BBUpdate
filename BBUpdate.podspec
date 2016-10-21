@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BBUpdate"
-  s.version          = "1.0"
+  s.version          = "1.1"
   s.summary          = "一行代码实现程序更新提醒"
   s.description      = <<-DESC
                        一行代码实现程序更新提醒，还可以设置确定取消等提示内容
