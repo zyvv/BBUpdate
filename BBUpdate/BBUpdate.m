@@ -25,6 +25,9 @@
     [BBUpdate shareUpdate].appID = appID;
     NSString *appStoreLookupString = [NSString stringWithFormat:@"https://itunes.apple.com/cn/lookup?id=%@", appID];
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:appStoreLookupString]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+        if (connectionError) {
+            return;
+        }
         NSError *error = nil;
         NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
         
